@@ -10,7 +10,7 @@ RUN apt-get update && \
   apt-get autoremove
 
 
-COPY ./synthea /synthea
+COPY . /synthea
 WORKDIR /synthea
 RUN ["./gradlew", "build", "check", "test"]
 
